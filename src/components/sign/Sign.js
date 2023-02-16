@@ -13,8 +13,14 @@ import {
 from 'mdb-react-ui-kit';
 import logo from "./logo.png";
 import './sign.css';
-import { useState } from 'react';
+import {useNavigate} from 'react-router-dom';
 export default function Sign() {
+  const navigate = useNavigate();
+
+  const navigateToContacts = () => {
+    // 👇️ navigate to /contacts
+    navigate('Hero');
+  };
   return (
     <MDBContainer fluid>
 
@@ -43,7 +49,7 @@ export default function Sign() {
                 Sign in with google
               </MDBBtn>
 
-              <MDBBtn className="mb-4 w-100" size="lg" style={{backgroundColor: '#8A88F2'}}>
+              <MDBBtn className="mb-4 w-100" size="lg" style={{backgroundColor: '#8A88F2'}} onClick={navigateToContacts}>
                 <img src={logo} alt=''></img>
                 Sign in with NFA
               </MDBBtn>
