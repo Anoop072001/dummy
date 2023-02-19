@@ -18,7 +18,7 @@ export default function Sign() {
   const navigate = useNavigate();
 
   const navigateToContacts = () => {
-    // 👇️ navigate to /contacts
+    // navigate to /contacts
     navigate('Hero');
   };
   return (
